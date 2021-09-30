@@ -25,6 +25,7 @@ const Head = styled.header`
     font-size: 1.6rem;
     padding-left: 5%;
     box-shadow: 0 3px 5px rgba(0,0,0,0.6);
+    z-index: 1;
 `
 
 const Cart = styled.img`
