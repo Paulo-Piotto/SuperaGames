@@ -1,12 +1,24 @@
 import styled from "styled-components";
-import data from '../products.json'; 
 import Item from "./item";
+import {games} from '../getData'
+import { useState } from "react";
 
 export default function GamesList(){
-    const products = data;
+    const [products, setProducts] = useState(games);
+
+
+
+    function compare(a,b){
+        return a.score < b.score ? 1 : a.score > b.score ? -1 : 0;
+    }
+    function sortByScore(){
+        setProducts([...products.sort(compare)])
+    }
+    
+
 
     return(
-        <ListContainer>
+        <ListContainer onClick={sortByScore}>
             {products.map((game, index) => 
                 <Item key={index} index={index} game={game}/>
             )}

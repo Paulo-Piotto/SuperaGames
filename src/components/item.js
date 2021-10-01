@@ -1,13 +1,10 @@
 import styled from "styled-components";
-import data from '../products.json';
-import {img} from '../getImages'
 
-export default function Item({index, game}){
-    const image = img;
+export default function Item({game}){
 
     return(
         <ItemContainer>
-            <img src={image[index]} alt='' />
+            <img src={game.image} alt='' />
             <div>
                 <span>{game.name}</span>
                 <p>R$ {game.price.toFixed(2)}</p>
@@ -32,13 +29,13 @@ const ItemContainer = styled.div`
     }
     
     img{
-        height: 45%;
+        height: 50%;
         margin-top: 8%;
     }
 
     div{
         width: 90%;
-        height: 55%;
+        height: 50%;
         margin-top: 5%;
         display: flex;
         flex-direction: column;

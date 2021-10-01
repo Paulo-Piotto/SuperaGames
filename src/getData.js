@@ -7,7 +7,9 @@ import banner5 from './assets/shards-of-darkness.png'
 import banner6 from './assets/terra-media-sombras-de-mordor.png'
 import banner7 from './assets/fifa-18.png'
 import banner8 from './assets/horizon-zero-dawn.png'
+import data from './products.json'; 
 
+const games = data;
 const img = [
         banner0,
         banner1,
@@ -20,6 +22,10 @@ const img = [
         banner8,
 ]
 
+games.forEach((el, index) => {
+  el.image = img[index];
+})
+
 export{
-  img
+  games
 }
