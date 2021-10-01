@@ -26,6 +26,10 @@ const Head = styled.header`
     padding-left: 5%;
     box-shadow: 0 3px 5px rgba(0,0,0,0.6);
     z-index: 1;
+
+    @media(min-width: 900px){
+        font-size: 2rem;
+    }
 `
 
 const Cart = styled.img`

@@ -51,7 +51,5 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   background-color: #e5e5e5;
-  display: flex;
-  justify-content: center;
 }
 

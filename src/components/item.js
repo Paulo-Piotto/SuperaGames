@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
-export default function Item({game}){
+export default function Item({game, index}){
+    const history = useHistory();
 
     return(
-        <ItemContainer>
+        <ItemContainer onClick={() => history.push(`/game/${index}`)}>
             <img src={game.image} alt='' />
             <div>
                 <span>{game.name}</span>
