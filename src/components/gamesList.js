@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Item from "./item";
-import {games} from '../services/getData'
+import { games } from '../services/getData'
 import { useState } from "react";
 import { byScore, byName, byPrice, byRandom } from "../services/services";
 
@@ -20,6 +20,7 @@ export default function GamesList(){
         }
     }
 
+
     return(
         <MainContainer>
             <SortContainer>
@@ -33,8 +34,8 @@ export default function GamesList(){
                 <button onClick={sort}>Aplicar</button>
             </SortContainer>
             <ListContainer>
-                {products.map((game, index) => 
-                    <Item key={index} index={index} game={game}/>
+                {products.map((game) => 
+                    <Item key={game.id} game={game}/>
                 )}
             </ListContainer>
         </MainContainer>
@@ -58,7 +59,7 @@ const SortContainer = styled.div`
     display: flex;
     align-items: center;
     font-size: 0.7rem;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     top: 90px;
 
     select{
@@ -98,3 +99,7 @@ const MainContainer = styled.div`
     flex-direction: column;
     align-items: center;
 `
+
+export {
+    MainContainer,
+}

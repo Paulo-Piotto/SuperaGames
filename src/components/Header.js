@@ -1,12 +1,16 @@
 import carrinho from '../assets/cart-icon.svg'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export default function Header(){
     return(
-        <Head>
-            <h1>SuperaGames</h1>
-            <Cart src={carrinho} />
-        </Head>
+        <Link to='/'>
+            <Head>
+                <h1>SuperaGames</h1>
+                <Cart src={carrinho} />
+            </Head>
+        </Link>
+        
     );
 }
 
