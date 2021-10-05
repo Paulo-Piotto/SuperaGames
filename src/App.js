@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import GamesList from "./components/gamesList";
 import GamePage from "./components/gamePage";
 import CartContext from "./contexts/cartContext";
+import CartPage from "./components/cartPage";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -13,11 +14,14 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path='/' exact>
+          <Route path='/' exact >
             <GamesList />
           </Route>
-          <Route path='/game/:id'>
+          <Route path='/game/:id' exact >
             <GamePage />
+          </Route>
+          <Route path='/checkout' exact >
+            <CartPage />
           </Route>
         </Switch>
       </BrowserRouter>

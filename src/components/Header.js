@@ -1,15 +1,15 @@
 import carrinho from '../assets/cart-icon.svg'
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function Header(){
+    const history = useHistory();
+
     return(
-        <Link to='/'>
-            <Head>
-                <h1>SuperaGames</h1>
-                <Cart src={carrinho} />
-            </Head>
-        </Link>
+        <Head>
+            <h1 onClick={() => history.push('/')} >SuperaGames</h1>
+            <Cart src={carrinho} onClick={() => history.push('/checkout')} />
+        </Head>
         
     );
 }

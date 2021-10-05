@@ -19,7 +19,7 @@ export default function GamePage(){
     return(
         <MainContainer>
             <GameContainer>
-                <img src={game[0].image} alt='' onClick={() => console.log(cart)}/>
+                <img src={game[0].image} alt='' />
                 <InfoContainer>
                     <p>{game[0].name}</p>
                     <div>
