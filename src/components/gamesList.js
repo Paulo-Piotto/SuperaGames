@@ -67,7 +67,7 @@ const SortContainer = styled.div`
         border-radius: 5px;
         border: none;
         outline: none;
-        background-color: white;
+        background-color: #e5e5e5;
         font-size: 0.8rem;
         padding: 5px;
     }

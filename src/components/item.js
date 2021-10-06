@@ -22,11 +22,12 @@ const ItemContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    border-radius: 8px;
+    border-bottom: 1px solid #c5c5c5;
+    /* background-color: white;
+    border-radius: 8px; */
 
     &:hover{
-        filter: brightness(1.5);
+        /* filter: brightness(1.5); */
         cursor: pointer;
     }
     
@@ -45,12 +46,15 @@ const ItemContainer = styled.div`
 
         span{
             text-align: center;
-            font-weight: bold;
+            /* font-weight: bold; */
+            color: #6b6b6b;
+            font-size: 0.7rem;
         }
 
         p{
             margin-bottom: 8%;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
+            font-weight: bold;
         }
     }
 
@@ -59,5 +63,7 @@ const ItemContainer = styled.div`
         width: 20%;
         height: 35vh;
         margin-right: 20px;
+        border-bottom: none;
+        border-right: 1px solid #c5c5c5;
     }
 `
